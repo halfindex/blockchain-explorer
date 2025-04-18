@@ -112,13 +112,14 @@ function TransactionsPageInner() {
                 (Page {page} of {pagination.totalPages}, {pagination.blocksPerPage} blocks per page)
               </p>
             </div>
-            <Link
-              href="/txs"
+            <button
+              type="button"
               className="btn btn-primary btn-sm self-start flex items-center gap-2"
+              onClick={() => router.refresh()}
             >
               <FiRefreshCw size={16} />
               Refresh
-            </Link>
+            </button>
           </div>
 
           {loading ? (
