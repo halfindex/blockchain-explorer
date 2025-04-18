@@ -94,6 +94,24 @@ Pull requests, issues, and feature suggestions are welcome!
 ## Demo
 [https://explorer.rdtchain.com](https://explorer.rdtchain.com)
 
+---
+
+## Production Deployment with PM2
+
+To run the explorer in production using [PM2](https://pm2.keymetrics.io/):
+
+```bash
+pm2 start ecosystem.config.cjs
+```
+
+This will start the app as defined in `ecosystem.config.cjs`.
+
+**Other useful PM2 commands:**
+- View logs: `pm2 logs explorer-app`
+- Stop: `pm2 stop explorer-app`
+- Restart: `pm2 restart explorer-app`
+- Status: `pm2 status`
+
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
