@@ -115,7 +115,7 @@ function TransactionsPageInner() {
             <button
               type="button"
               className="btn btn-primary btn-sm self-start flex items-center gap-2"
-              onClick={() => router.refresh()}
+              onClick={() => window.location.reload()}
             >
               <FiRefreshCw size={16} />
               Refresh
