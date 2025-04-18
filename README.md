@@ -25,7 +25,7 @@ A modern, open-source, ultra simple blockchain explorer built for EVM-compatible
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/halfindex/rdtchain-explorer.git
+git clone https://github.com/halfindex/blockchain-explorer.git
 cd rdtchain-explorer
 ```
 
