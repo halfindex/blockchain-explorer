@@ -18,10 +18,20 @@ export const metadata = {
 };
 
 import TopProgressBar from "../components/TopProgressBar";
-
+const Spinner = () => {
+  return (
+    <div className="flex justify-center items-center py-12">
+      <div className="w-10 h-10 rounded-full border-4 border-gray-200 border-t-blue-600 animate-spin"></div>
+    </div>
+  );
+};
 export default function RootLayout({ children }) {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
+      <div className="flex justify-center items-center py-12">
+        <Spinner />
+      </div>
+    </div>}>
       <html lang="en" data-theme="rdtLightTheme">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-[#f8fafc] via-[#e0e7ef] to-[#f0fdfa] dark:from-[#181f2a] dark:via-[#212e3a] dark:to-[#1a2636] relative`}
@@ -32,7 +42,7 @@ export default function RootLayout({ children }) {
         >
           <TopProgressBar />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10 pointer-events-none animate-gradient-move z-0" style={{ backdropFilter: 'blur(2px)' }}></div>
-          <div className="relative z-10">
+          <div className="relative z-10 mt-14">
             {children}
           </div>
         </body>

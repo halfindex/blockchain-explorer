@@ -22,7 +22,6 @@ async function getHomePageData() {
     let allTxs = [];
     for (const block of latestBlocks) {
       if (block?.transactions) {
-        console.log('block txns', block.transactions);
         allTxs.push(...block.transactions.map(hash => ({
           hash,
           timestamp: block.timestamp
