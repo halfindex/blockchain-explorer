@@ -1,8 +1,5 @@
 "use client";
 
-import Link from 'next/link';
-import { FiGithub, FiExternalLink, FiBookOpen } from 'react-icons/fi';
-
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
